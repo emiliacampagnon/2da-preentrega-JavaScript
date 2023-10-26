@@ -5,7 +5,7 @@ const productosViu = [
         categoria: 'Bikinis',
         modelo: 'Triangulito',
         estampado: 'Aurora',
-        thumbnail: '../../Imagenes/aurora.png',
+        thumbnail: './Imagenes/aurora.png',
         precio: 15999,
     },
     {
@@ -13,7 +13,7 @@ const productosViu = [
         categoria: 'Bikinis',
         modelo: 'Triangulito',
         estampado: 'Federica',
-        thumbnail: '../../Imagenes/federica.png',
+        thumbnail: './Imagenes/federica.png',
         precio: 15999,
     },
     {
@@ -21,7 +21,7 @@ const productosViu = [
         categoria: 'Bikinis',
         modelo: 'Triangulito',
         estampado: 'Olivia',
-        thumbnail: '../../Imagenes/olivia.png',
+        thumbnail: './Imagenes/olivia.png',
         precio: 15999,
     },
     {
@@ -29,7 +29,7 @@ const productosViu = [
         categoria: 'Fitness',
         modelo: 'calza corta',
         estampado: 'Andrómeda',
-        thumbnail: '../../Imagenes/andromeda.png',
+        thumbnail: './Imagenes/andromeda.png',
         precio: 12999,
     },
     {
@@ -37,7 +37,7 @@ const productosViu = [
         categoria: 'Fitness',
         modelo: 'Calza Larga',
         estampado: 'Libra',
-        thumbnail: '../../Imagenes/libra.png',
+        thumbnail: './Imagenes/libra.png',
         precio: 15999,
     },
     {
@@ -45,10 +45,12 @@ const productosViu = [
         categoria: 'Urban',
         modelo: 'Hoodie',
         estampado: 'xx Black',
-        thumbnail: '../../Imagenes/xx.JPEG',
+        thumbnail: './Imagenes/xx.JPEG',
         precio: 16999,
     },
 ]; 
+
+
 
 const Card = (props) => {
 
@@ -57,32 +59,33 @@ const Card = (props) => {
     div.setAttribute('class', 'card-content');
     div.innerHTML =
         `
-      <img src=${productosViu.thumbnail}>
-      <div class="card-body">
-        <p><span>${productosViu.categoria}</span> <span>${productosViu.modelo}</span></p>
-        <h2> ${productosViu.estampado}</h2>
-        <p>Dueño:${productosViu.precio}</p>
-        <a data-id=${productosViu.id} class="card-link">Seleccionar Producto</a>
+        <img src=${producto.thumbnail}>
+        <div class="card-body">
+        <p><span>${producto.categoria}</span> </p> 
+        <p><span>${producto.modelo}</span></p>
+        <h2> ${producto.estampado}</h2>
+        <p>Dueño:${producto.precio}</p>
+        <a data-id=${producto.id} class="card-link">Seleccionar Producto</a>
       </div>
     `;
-
-
     return div;
 }
-
 const CardContainer = (props) => {
-
     let { productos } = props;
-
-    
     let section = document.createElement('section');
-  
     section.setAttribute('class', 'card-container')
     productos.forEach(producto => {
         const card = Card(producto);
         section.append(card);
     });
-
     return section;
 }
+
 console.log(productosViu)
+
+const App = () => {
+    let appRoot = document.querySelector('#root');
+    appRoot.append(CardContainer({productos : productosViu}))}
+
+App();
+
