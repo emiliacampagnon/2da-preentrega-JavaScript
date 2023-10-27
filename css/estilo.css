@@ -29,13 +29,6 @@ header {
     animation-name: aparece;
     animation-iteration-count: infinite; }
 
-@keyframes aparece {
-  0% {
-    opacity: 0.4; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: 0.4; } }
   header .navegador {
     margin-top: 45px;
     text-align: center;
@@ -54,12 +47,7 @@ header {
           background-color: #edede9;
           border-radius: 30px; }
 
-main .carousel-inner img {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  margin-top: 10px;
-  border-radius: 10px; }
+
 
 main .logowhatsapp {
   position: fixed;
@@ -71,9 +59,9 @@ main .logowhatsapp {
 main .section1 p {
   white-space: pre-line;
   font-size: larger;
-  line-height: 1.5;
+  line-height: 1;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 50px 90px;
+  margin: 50px 50px;
   color: #a99985;
   background-color: #dcd8d14e;
   padding: 50px;
@@ -118,122 +106,137 @@ main .contenedorcategoria {
   height: 150px;
   background-color: #dcd8d1; }
 
-main h3 {
-  padding: 15px;
-  padding-left: 100px;
-  font-style: italic;
-  color: white;
-  font-size: 35px;
-  font-family: "Tinos", serif; }
 
-main h4 {
-  padding: 25px;
-  padding-left: 100px;
-  font-style: italic;
-  color: white;
-  font-size: 20px;
-  font-family: "Tinos", serif; }
 
-main .section3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 5fr 1fr;
-  padding: 40px;
-  margin: 10px;
-  justify-items: center;
-  align-items: center; }
-  main .section3 img {
-    width: 400px;
-    margin: 20px;
-    border-radius: 10px; }
-  main .section3 .ordena:hover {
-    transform: scale(1.05, 1.05); }
-  main .section3 .ordenb:hover {
-    transform: scale(1.05, 1.05); }
-  main .section3 .ordenc:hover {
-    transform: scale(1.05, 1.05); }
-  main .section3 .ordend {
-    margin: 10px; }
-    main .section3 .ordend:hover {
-      transform: scale(1.05, 1.05);
-      background-color: #dcd8d1; }
-  main .section3 .ordene {
-    margin: 10px; }
-    main .section3 .ordene:hover {
-      transform: scale(1.05, 1.05);
-      background-color: #dcd8d1; }
-  main .section3 .ordenf {
-    margin: 10px; }
-    main .section3 .ordenf:hover {
-      transform: scale(1.05, 1.05);
-      background-color: #dcd8d1; }
-  main .section3 h5 {
-    padding: 20px;
+  .section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 10px;
-    font-style: italic;
-    font-size: 30px;
-    text-align: center;
-    color: #c9ada7;
-    font-family: "Tinos", serif; }
+    background-color: dcd8d1;
+    
+}
 
-main p {
-  white-space: pre-line;
-  font-size: larger;
+.section3 img{
+    width: 400px;
+    border-radius: 10px;
+  
+}
+h3{
+  font-size: x-large;
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 50px 90px;
+  color: #a99985;
+  background-color: #dcd8d100;
+  margin: 10px;
+}
+.section3 p{
+  white-space: pre-line;
+  font-size: larger;
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
   color: #a99985;
   background-color: #dcd8d14e;
-  padding: 50px;
-  border-radius: 10px; }
-
-main .section4 {
-  display: flex;
-  justify-content: space-around;
   padding: 20px;
-  margin: 40px; }
-  main .section4 img {
-    width: 400px;
-    border-radius: 10px; }
+  border-radius: 10px;
+}
 
-.mainform {
-  height: 950px; }
-  .mainform h5 {
-    font-style: italic;
-    font-size: xx-large;
-    text-align: center;
-    margin-top: 40px;
-    color: #c9ada7;
-    font-family: "Tinos", serif; }
-  .mainform .formulario {
-    width: 500px;
-    height: 600px;
-    margin: 0 auto;
-    margin-top: 40px;
-    background-color: #dcd8d1;
-    color: white;
-    line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: inherit;
-    font-size: larger;
-    padding: 10px 40px;
-    border-radius: 5px; }
-    .mainform .formulario .itemsform {
-      margin-top: 30px; }
-    .mainform .formulario .contenedorboton {
-      height: 40px;
-      display: flex;
-      justify-content: center; }
-    .mainform .formulario .boton {
-      font-family: Arial, Helvetica, sans-serif;
-      font-style: inherit;
-      font-size: large;
-      background-color: #a99985;
-      border: none; }
-    .mainform .formulario .boton:hover {
-      background-color: #f5f4f2;
-      color: #a99985;
-      border: none; }
+.card-link{
+  white-space: pre-line;
+  font-size: larger;
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: #1811054e;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.cards-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+.form-container-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5px;
+  height: 350px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #1811054e;
+  border-radius: 10px;
+}
+
+h5 {
+  text-align: center;
+  font-size: xx-large;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  margin: 10px;
+}
+
+
+
+.form-container-inputs div {
+  display: flex;
+  min-width: 300px;
+  width: 48%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  padding: 5px;
+
+}
+
+.textoForm {
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  margin: 10px;
+  padding: 10px;
+
+}
+
+.form-container-inputs div input {
+  height: 40px;
+  width: 70%;
+  padding: 5px;
+}
+.form-container-inputs div label {
+
+  padding: 10px;
+}
+
+#save-button {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 48%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+}
 
 footer {
   background-color: #dcd8d1;
@@ -247,251 +250,3 @@ footer {
   footer a:hover {
     transform: scale(1.1, 1.1); }
 
-@media only screen and (max-width: 480px) {
-  header {
-    height: 210px;
-    padding-top: 5px; }
-    header h1 {
-      font-size: 70px; }
-    header h2 {
-      font-size: 18px;
-      letter-spacing: 2px; }
-    header .navegador {
-      margin: 5px; }
-      header .navegador li a {
-        font-size: 15px;
-        padding: 10px;
-        margin: auto; }
-  main .carousel-inner img {
-    width: 100%; }
-  main .logowhatsapp {
-    bottom: 30px;
-    right: 30px; }
-    main .logowhatsapp img {
-      width: 30px; }
-  main .section1 p {
-    font-size: 13px;
-    padding: 30px;
-    margin: 20px; }
-  main .section2 {
-    padding: 10px;
-    margin: 0 auto;
-    height: 600px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    row-gap: 10px; }
-    main .section2 img {
-      width: 80px;
-      height: 80px;
-      padding: 20%; }
-    main .section2 .ordena {
-      order: 1; }
-    main .section2 .ordend {
-      order: 2; }
-    main .section2 .ordenb {
-      order: 3; }
-    main .section2 .ordene {
-      order: 4; }
-    main .section2 .ordenc {
-      order: 5; }
-    main .section2 .ordenf {
-      order: 6; }
-  main .contenedorcategoria {
-    height: 100px; }
-  main h3 {
-    font-size: 22px;
-    padding: 7px;
-    padding-left: 40px; }
-  main h4 {
-    font-size: 16px;
-    padding: 7px;
-    padding-left: 40px; }
-  main .section3 {
-    padding: 10px;
-    height: 1500px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5fr 1fr 5fr 1fr 5fr 1fr;
-    row-gap: 10px;
-    justify-items: center; }
-    main .section3 img {
-      width: 300px; }
-    main .section3 h5 {
-      font-size: x-large; }
-    main .section3 .ordena {
-      order: 1; }
-    main .section3 .ordend {
-      order: 2; }
-    main .section3 .ordenb {
-      order: 3; }
-    main .section3 .ordene {
-      order: 4; }
-    main .section3 .ordenc {
-      order: 5; }
-    main .section3 .ordenf {
-      order: 6; }
-  main p {
-    font-size: medium;
-    line-height: 1.5;
-    margin: 20px;
-    padding: 20px;
-    padding-left: 50px;
-    padding-right: 50px; }
-  main .section4 {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto; }
-    main .section4 img {
-      margin: 10px;
-      width: 250px;
-      border-radius: 10px; }
-  main .contenedorformulario {
-    height: 700px; }
-    main .contenedorformulario h5 {
-      font-size: 30px;
-      margin-top: 40px; }
-    main .contenedorformulario .formulario {
-      width: 80%;
-      height: 90%;
-      line-height: 1.5;
-      font-size: medium; }
-    main .contenedorformulario .itemsform {
-      margin-top: 40px; }
-  footer {
-    height: 100px; }
-    footer img {
-      width: 40px;
-      margin: 10px; } }
-
-
-      
-
-
-      
-
-      .card-container {
-        margin-top: 3rem;
-        padding: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-    }
-    
-    .card-content {
-        min-width: 320px;
-        width: 30%;
-        background-color: #FFA1F5;
-        box-shadow: #ffa1f62d 0px 10px 36px 0px, #ffa1f62d 0px 0px 0px 1px;
-    }
-    
-    .card-content img {
-        width: 100%;
-        height: 600px;
-        object-fit: cover;
-    }
-    
-    .card-body {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .card-body h2 {
-        font-size: 2rem;
-    }
-    
-    .badget {
-        display: flex;
-        gap: 10px;
-        color: #282828;
-    }
-    .card-link{
-        width: 100%;
-        background-color: #fff;
-        padding: 5px;
-        text-align: center;
-        cursor: pointer;
-        margin: 10px 0;
-    }
-    .form-container {
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 5px;
-        padding: 1rem;
-        margin: 1rem;
-    }
-    
-    .form-container-header {
-        width: 100%;
-    }
-    
-    .form-container-inputs{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    
-    .form-container-inputs div {
-        display: flex;
-        flex-direction: column;
-        min-width: 300px;
-        width: 48%;
-    
-    }
-    
-    .form-container-inputs div label{
-        font-size: 1.2rem;
-    }
-    .form-container-inputs div input {
-        height: 40px;
-        padding: 5px;
-    }
-    
-    #save-button{
-     width: 48%;
-     border: none;
-     outline: none;
-     font-size: 1.2rem;
-     cursor: pointer;
-    }
-    
-    .paseo-content{
-        margin:  0 auto;
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        background-color: #fff;
-        justify-content: space-between;
-        padding: 1rem;
-        gap: 1rem;
-    }
-    
-    .paseo-content-rigth{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .paseo-content-rigth img{
-        width: 100%;
-        height: 600px;
-        object-fit: cover;
-        object-position: center;
-    }
-    
-    .paseo-content-rigth button {
-        background-color: rgb(164, 8, 8);
-        color: #fff;
-        border: none;
-        outline: none;
-        font-size: 1.4rem;
-        padding: 10px;
-        cursor: pointer;
-    }
