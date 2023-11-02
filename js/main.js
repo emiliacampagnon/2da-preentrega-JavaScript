@@ -103,13 +103,15 @@ const saveData = () => {
 
     if (name && email) {
         const data = {
-            name,
+            name, 
             email,
         }
         localStorage.setItem('userData', JSON.stringify(data));
         console.log(data)
     }
 }
+const resUser = JSON.parse(localStorage.getItem('userData'));
+console.log (resUser)
 
 const saveButton = document.querySelector('#save-button');
     saveButton.addEventListener('click', saveData);
