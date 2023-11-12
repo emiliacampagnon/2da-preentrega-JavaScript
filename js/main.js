@@ -56,17 +56,28 @@ let cards = document.createElement('div');
 
 for (const producto of productosViu) {
     cards.innerHTML += `
-                    <section class="section3">
-                        <img src=${producto.thumbnail}>
-                    
-                        
-                        <h3><span>${producto.modelo}</span></h3>
-                        
-                        <h3> ${producto.estampado}</h3>
-                        <p>Precio:${producto.precio}</p>
-                        <a data-id=${producto.id} class="card-link">Seleccionar Producto</a>
-                        </section>`;
+        <section class="section3">
+            <img src=${producto.thumbnail}>      
+            <h3><span>${producto.modelo}</span></h3>
+            <h3> ${producto.estampado}</h3>
+            <p>Precio:${producto.precio}</p>
+            <a data-id=${producto.id} class="card-link">Seleccionar Producto</a>
+        </section>`;
+        /* const selectedProductoLink = div.querySelector ('.card-link');
+        selectedProductoLink.addEventListener( 'click', ( ) => handleProductoSelection (props)) */
+
+
 }
+
+const userData = JSON.parse(localStorage.getItem('userTurn'));
+const div = document.createElement('div');
+
+div.innerHTML =
+<div>
+    <h2>Reservó el producto ${producto.categoria} ${producto.modelo} ${producto.estampado} </h2>
+    <h3>A nombre de ${userData.name}</h3>
+    <h3>Contacto ${userData.email}</h3>
+</div>
 
 mainElement.appendChild(cards);
 
