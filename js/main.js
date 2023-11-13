@@ -67,11 +67,10 @@ function agregarAlCarrito(id) {
     btnAdd.disabled = true;
   }
 
-function mostrarCarrito() {
-    const carritoHtml = document.querySelector ('.carrito');
-
+  function mostrarCarrito() {
+    const carritoHtml = document.querySelector('.carrito');
     const carritoLocalStorage = JSON.parse(localStorage.getItem('carrito'));
-    console.log(carritoLocalStorage)
+    console.log(carritoLocalStorage);
     
     carritoLocalStorage.forEach((item) => {
         carritoHtml.innerHTML += `
@@ -80,16 +79,11 @@ function mostrarCarrito() {
                 <h3 class="card-modelo-carrito"><span>${item.modelo}</span></h3>
                 <h3 class="card-estampado-carrito">${item.estampado}</h3>
                 <p class="card-precio-carrito">Precio: $ ${item.precio}</p>
-                <a class="borrar-button" data-id="${item.id}"><span><i class="bi bi-trash"></i></span></a>
             </section>`;
-
-        
     });
-
-
 }
-mostrarCarrito()
 
+mostrarCarrito();
 
 let cards = document.createElement('div');
 
