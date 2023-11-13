@@ -2,24 +2,24 @@
 const productosViu = [
     {
         id: 0,
-        categoria: 'Bikinis',
-        modelo: 'Triangulito ',
+        categoria: 'Bikini',
+        modelo: 'Bikini Triangulito ',
         estampado: 'Aurora',
         thumbnail: './Imagenes/aurora.png',
         precio: 15999,
     },
     {
         id: 1,
-        categoria: 'Bikinis',
-        modelo: 'Triangulito ',
+        categoria: 'Bikini',
+        modelo: 'Bikini Triangulito ',
         estampado: 'Federica',
         thumbnail: './Imagenes/federica.png',
         precio: 15999,
     },
     {
         id: 2,
-        categoria: 'Bikinis',
-        modelo: 'Triangulito ',
+        categoria: 'Bikini',
+        modelo: 'Bikini Triangulito ',
         estampado: 'Olivia',
         thumbnail: './Imagenes/olivia.png',
         precio: 15999,
@@ -52,34 +52,59 @@ const productosViu = [
 
 const mainElement = document.querySelector('main');
 
+function agregarAlCarrito(id) {
+    const producto = productosViu.find((p) => p.id == id);
+  
+    if (producto) {
+      carrito.push(producto);
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      console.log('Producto agregado al carrito:', producto);
+    } else {
+      console.error('Producto no encontrado');
+    }
+    const btnAdd = document.getElementById (`agregar-${id}`);
+    btnAdd.innerHTML = 'Producto agregado';
+    btnAdd.disabled = true;
+  }
+
+function mostrarCarrito() {
+    const carritoHtml = document.querySelector ('.carrito');
+
+    const carritoLocalStorage = JSON.parse(localStorage.getItem('carrito'));
+    console.log(carritoLocalStorage)
+    
+    carritoLocalStorage.forEach((item) => {
+        carritoHtml.innerHTML += `
+            <section class="section5">
+                <img class="card-img-carrito" src=${item.thumbnail}>     
+                <h3 class="card-modelo-carrito"><span>${item.modelo}</span></h3>
+                <h3 class="card-estampado-carrito">${item.estampado}</h3>
+                <p class="card-precio-carrito">Precio: $ ${item.precio}</p>
+                <a class="borrar-button" data-id="${item.id}"><span><i class="bi bi-trash"></i></span></a>
+            </section>`;
+    });
+
+
+}
+mostrarCarrito()
+
+
 let cards = document.createElement('div');
 
 for (const producto of productosViu) {
     cards.innerHTML += `
-        <section class="section3">
-            <img src=${producto.thumbnail}>      
-            <h3><span>${producto.modelo}</span></h3>
-            <h3> ${producto.estampado}</h3>
-            <p>Precio:${producto.precio}</p>
-            <a data-id=${producto.id} class="card-link">Seleccionar Producto</a>
+        <section class="section5">
+            <img class="card-img" src=${producto.thumbnail}>     
+            <h3 class= "card-modelo"><span>${producto.modelo}</span></h3>
+            <h3 class= "card-estampado"> ${producto.estampado}</h3>
+            <p class= "card-precio">Precio: $ ${producto.precio}</p>
+            <button class="btn-agregaralcarrito" onclick="agregarAlCarrito('${producto.id}')" id="agregar-${producto.id}">Agregar al carrito</button>
+            
         </section>`;
-        /* const selectedProductoLink = div.querySelector ('.card-link');
-        selectedProductoLink.addEventListener( 'click', ( ) => handleProductoSelection (props)) */
-
-
 }
-
-const userData = JSON.parse(localStorage.getItem('userTurn'));
-const div = document.createElement('div');
-
-div.innerHTML =
-<div>
-    <h2>Reservó el producto ${producto.categoria} ${producto.modelo} ${producto.estampado} </h2>
-    <h3>A nombre de ${userData.name}</h3>
-    <h3>Contacto ${userData.email}</h3>
-</div>
-
 mainElement.appendChild(cards);
+
+const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 
 const form = document.querySelector('#form');
@@ -122,7 +147,7 @@ const saveData = () => {
     }
 }
 const resUser = JSON.parse(localStorage.getItem('userData'));
-console.log (resUser)
+
 
 const saveButton = document.querySelector('#save-button');
     saveButton.addEventListener('click', saveData);

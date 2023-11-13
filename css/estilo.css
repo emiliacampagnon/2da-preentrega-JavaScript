@@ -3,31 +3,39 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
-  background-color: #f5f4f2; }
-
-header {
-  height: 320px;
-  background-color: #dcd8d1;
-  text-align: center;
-  padding-top: 30px; }
-  header h1 {
-    font-size: 90px;
-    color: white;
-    font-weight: 200px;
-    letter-spacing: 2px;
+  body {
+    background-color: #e0d1cb; }
+  
+  header {
+    width: 100%;
+    height: 380px;
+    background-color: #844740;
     text-align: center;
-    font-family: "Tinos", serif; }
-  header h2 {
-    font-size: 22px;
-    color: white;
-    letter-spacing: 4px;
-    text-align: center;
-    font-family: "Tinos", serif;
-    font-style: italic;
-    animation-duration: 4s;
-    animation-name: aparece;
-    animation-iteration-count: infinite; }
+    padding-top: 60px; }
+    @media screen and (max-width: 480px) {
+      header {
+        height: 210px;
+        padding-top: 5px; } }
+    header h1 {
+      font-size: 90px;
+      color: white;
+      font-weight: 200px;
+      letter-spacing: 2px;
+      text-align: center;
+      font-family: "Tinos", serif; }
+      @media screen and (max-width: 480px) {
+        header h1 {
+          font-size: 70px; } }
+    header h2 {
+      font-size: 22px;
+      color: white;
+      letter-spacing: 4px;
+      text-align: center;
+      font-family: "Tinos", serif;
+      font-style: italic;
+      animation-duration: 4s;
+      animation-name: aparece;
+      animation-iteration-count: infinite; }
 
   header .navegador {
     margin-top: 45px;
@@ -38,14 +46,49 @@ header {
       header .navegador li a {
         color: white;
         text-decoration: none;
-        padding: 20px;
-        margin: 20px;
+        padding: 15px;
+        margin: 15px;
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif; }
         header .navegador li a:hover {
           color: #a99985;
           background-color: #edede9;
           border-radius: 30px; }
+
+.offcanvas.offcanvas-end {
+  margin: 0;  
+}
+
+.bg-header {
+  background-color: #f5f4f2;
+  margin-bottom: 2rem;
+}
+
+.navbar-toggler {
+  border: 2px solid #a99985;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  nav-up: 50px;
+  right: 50px;
+}
+
+.container-fluid{
+  display: flex;
+  height: 40px;  
+}
+
+.offcanvas-title {
+  color: #a99985;
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 transparent;
+}
 
 
 
@@ -56,90 +99,321 @@ main .logowhatsapp {
   main .logowhatsapp img {
     width: 55px; }
 
-main .section1 p {
-  white-space: pre-line;
-  font-size: larger;
-  line-height: 1;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 50px 50px;
-  color: #a99985;
-  background-color: #dcd8d14e;
-  padding: 50px;
+    main .section1 p {
+      white-space: pre-line;
+      font-size: 20px;
+      line-height: 1.5;
+      font-family: "Tinos", serif;
+      margin: 50px 90px;
+      color: white;
+      background-color: #8447409a;
+      padding: 50px;
+      border-radius: 10px; }
+      
+    
+    .section7 {
+      height: 100px;
+      display: flex;
+      margin: 10px;
+      padding: 10px;
+       }
+    .section7 div {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+
+      
+      main .section7 img {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        background-color: #8447409a;
+        border-radius: 10px;
+      }
+       
+      main .section7 h5 {
+        font-style: italic;
+        font-size: 20px;
+        color: #844740;
+        font-family: "Tinos", serif;
+        line-height: 2; 
+        text-align: center;}
+        
+        
+    
+    main .contenedorcategoria {
+      height: 150px;
+      background-color: #844740; }
+     
+    main h3 {
+      padding: 15px;
+      padding-left: 100px;
+      font-style: italic;
+      color: white;
+      font-size: 35px;
+      font-family: "Tinos", serif; }
+      
+    
+    main h4 {
+      padding: 25px;
+      padding-left: 100px;
+      font-style: italic;
+      color: white;
+      font-size: 20px;
+      font-family: "Tinos", serif; }
+      
+    
+    main .section3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 5fr 1fr;
+      padding: 40px;
+      margin: 10px;
+      justify-items: center;
+      align-items: center; }
+      @media screen and (max-width: 480px) {
+        main .section3 {
+          padding: 0px;
+          margin: 0px;
+          height: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 5fr 1fr 5fr 1fr 5fr 1fr;
+          row-gap: 5px;
+          justify-items: center; } }
+      main .section3 img {
+        width: 400px;
+        margin: 20px;
+        border-radius: 10px; }
+        
+      main .section3 .ordena:hover {
+        transform: scale(1.05, 1.05); }
+      
+      main .section3 .ordenb:hover {
+        transform: scale(1.05, 1.05); }
+      
+      main .section3 .ordenc:hover {
+        transform: scale(1.05, 1.05); }
+      
+      main .section3 .ordend {
+        margin: 10px; }
+        main .section3 .ordend:hover {
+          transform: scale(1.05, 1.05);
+          background-color: #8447409a;
+          color: white; }
+       
+      main .section3 .ordene {
+        margin: 10px; }
+        main .section3 .ordene:hover {
+          transform: scale(1.05, 1.05);
+          background-color: #8447409a;
+          color: white; }
+        
+      main .section3 .ordenf {
+        margin: 10px; }
+        main .section3 .ordenf:hover {
+          transform: scale(1.05, 1.05);
+          background-color: #8447409a;
+          color: white; }
+       
+      main .section3 h5 {
+        padding: 20px;
+        border-radius: 10px;
+        font-style: italic;
+        font-size: 25px;
+        text-align: center;
+        color: #844740;
+        font-family: "Tinos", serif; }
+    
+    main p {
+      white-space: pre-line;
+      font-size: 19px;
+      line-height: 1.5;
+      font-family: "Tinos", serif;
+      margin: 50px 90px;
+      color: white;
+      background-color: #8447409a;
+      padding: 50px;
+      border-radius: 10px; }
+      @media screen and (max-width: 480px) {
+        main p {
+          font-size: medium;
+          line-height: 1.5;
+          margin: 20px;
+          padding: 20px;
+          padding-left: 50px;
+          padding-right: 50px; } }
+    
+    main .section4 {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      margin: 40px; }
+      @media screen and (max-width: 480px) {
+        main .section4 {
+          flex-direction: column;
+          align-items: center;
+          margin: 0 auto; } }
+      main .section4 img {
+        width: 400px;
+        border-radius: 10px; }
+        @media screen and (max-width: 480px) {
+          main .section4 img {
+            margin: 10px;
+            width: 250px;
+            border-radius: 10px; } }
+            main .section4 {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      margin: 40px; }
+      @media screen and (max-width: 480px) {
+        main .section4 {
+          flex-direction: column;
+          align-items: center;
+          margin: 0 auto; } }
+      main .section4 img {
+        width: 400px;
+        border-radius: 10px; }
+        @media screen and (max-width: 480px) {
+          main .section4 img {
+            margin: 10px;
+            width: 250px;
+            border-radius: 10px; } }
+
+
+
+.section5 {
+  
+  padding: 20px;
+  margin: 20px; 
+  text-align: center;
+}   
+.card-img {
+    width: 400px;
+    border-radius: 10px; }
+
+.card-img-carrito {
+  width: 100px;
   border-radius: 10px; }
 
-main .section2 {
-  margin: 10px;
-  padding: 20px 50px;
-  height: 240px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  justify-items: center; }
-  main .section2 img {
-    width: 100px;
-    height: 100px;
-    padding: 20px;
-    background-color: #dcd8d1;
-    border-radius: 10px;
-    align-self: center; }
-  main .section2 .ordena {
-    transition: all 2s ease; }
-    main .section2 .ordena:hover {
-      transform: rotate(360deg); }
-  main .section2 .ordenb {
-    transition: all 2s ease; }
-    main .section2 .ordenb:hover {
-      transform: rotate(360deg); }
-  main .section2 .ordenc {
-    transition: all 2s ease; }
-    main .section2 .ordenc:hover {
-      transform: rotate(360deg); }
-  main .section2 h5 {
-    font-style: italic;
-    font-size: large;
-    text-align: center;
-    color: #c9ada7;
-    font-family: "Tinos", serif;
-    line-height: 3.5; }
 
-main .contenedorcategoria {
-  height: 150px;
-  background-color: #dcd8d1; }
-
-
-
-  .section3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    background-color: dcd8d1;
-    
+.card-modelo {
+  font-size: 30px;  
+  margin: 0px;
+  padding: 10px;
+  text-align: center;
+}
+.card-estampado {
+  font-size: 40px;  
+  margin: 0px;
+  padding: 10px;
+  text-align: center;
+}
+.card-precio {
+  font-size: 20px;  
+  margin: 0px;
+  padding: 10px;
+  text-align: center;
 }
 
-.section3 img{
-    width: 400px;
-    border-radius: 10px;
+.card-modelo-carrito {
+  color: #a99985;
+  font-size: 10px;  
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+.card-estampado-carrito {
+  color: #a99985;
+  font-size: 10px;  
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+.card-precio-carrito {
+  color: white;
+  font-size: 10px;  
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  background-color: #844740;
+  border-radius: 5px;
+}
+
+.btn-agregaralcarrito {
+  background-color: #844740;
+  color: white;
+  font-size: 30px;  
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+
   
 }
-h3{
-  font-size: x-large;
-  line-height: 1.5;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #a99985;
-  background-color: #dcd8d100;
-  margin: 10px;
-}
-.section3 p{
-  white-space: pre-line;
-  font-size: larger;
-  line-height: 1;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #a99985;
-  background-color: #dcd8d14e;
-  padding: 20px;
-  border-radius: 10px;
-}
+                
+
+    
+    .mainform {
+      height: 950px; }
+      @media screen and (max-width: 480px) {
+        .mainform {
+          height: 700px; } }
+      .mainform h5 {
+        font-style: italic;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 40px;
+        color: #844740;
+        font-family: "Tinos", serif; }
+        @media screen and (max-width: 480px) {
+          .mainform h5 {
+            font-size: 30px;
+            margin-top: 40px; } }
+      .mainform .formulario {
+        width: 500px;
+        height: 600px;
+        margin: 0 auto;
+        margin-top: 40px;
+        background-color: #8447409a;
+        color: white;
+        line-height: 1.5;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: inherit;
+        font-size: larger;
+        padding: 10px 40px;
+        border-radius: 5px; }
+        @media screen and (max-width: 480px) {
+          .mainform .formulario {
+            width: 80%;
+            height: 90%;
+            line-height: 1.5;
+            font-size: medium; } }
+        .mainform .formulario .itemsform {
+          margin-top: 30px; }
+          @media screen and (max-width: 480px) {
+            .mainform .formulario .itemsform {
+              margin-top: 40px; } }
+        .mainform .formulario .contenedorboton {
+          height: 40px;
+          display: flex;
+          justify-content: center; }
+        .mainform .formulario .boton {
+          font-family: Arial, Helvetica, sans-serif;
+          font-style: inherit;
+          font-size: large;
+          background-color: #e0d1cb;
+          color: #844740;
+          border: none; }
+        .mainform .formulario .boton:hover {
+          background-color: #844740;
+          color: white;
+          border: none; }
+
 
 .card-link{
   white-space: pre-line;
@@ -245,14 +519,21 @@ h5 {
 }
 
 footer {
-  background-color: #dcd8d1;
+  background-color: #844740;
   color: white;
   height: 160px;
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    footer {
+      height: 100px; } }
   footer img {
     margin: 20px; }
+    @media screen and (max-width: 480px) {
+      footer img {
+        width: 40px;
+        margin: 10px; } }
   footer a:hover {
     transform: scale(1.1, 1.1); }
 
