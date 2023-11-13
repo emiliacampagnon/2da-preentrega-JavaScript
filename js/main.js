@@ -82,6 +82,8 @@ function mostrarCarrito() {
                 <p class="card-precio-carrito">Precio: $ ${item.precio}</p>
                 <a class="borrar-button" data-id="${item.id}"><span><i class="bi bi-trash"></i></span></a>
             </section>`;
+
+        
     });
 
 
